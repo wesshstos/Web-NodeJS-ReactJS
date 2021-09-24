@@ -14,7 +14,7 @@ export const consultarProdutos = async (request: Request, response: Response) =>
 
 export const consultaProduto = async (request: Request, response: Response) =>{
     const {id} = request.params
-    const produto = await getRepository(Produtos).findOne()
+    const produto = await getRepository(Produtos).findOne(id)
     return response.json(produto)
 }
 

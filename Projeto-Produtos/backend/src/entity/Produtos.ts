@@ -2,17 +2,23 @@ import {Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColu
 
 @Entity()
 export class Produtos{
-    @PrimaryGeneratedColumn()
+    @PrimaryGeneratedColumn("increment")
     id: number;
 
     @Column()
     titulo: string;
 
     @Column()
-    description: string;
+    ds_tipoProd: string;
+
+    @Column("decimal", {precision: 5, scale: 2})
+    vlrCompra: number;
 
     @Column()
-    preco: number;
+    qtddProduto: number;
+
+    @Column("decimal", {precision: 5, scale: 2})
+    vlrVenda: number;
 
     @Column()
     dtVencimento: Date

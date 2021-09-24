@@ -1,4 +1,4 @@
-import {Router, request, response, Request, Response} from 'express';
+import {Router,request,response, Request, Response} from 'express';
 
 import { cadProduto } from './controller/ProdController'
 import { consultarProdutos } from './controller/ProdController'
@@ -14,7 +14,7 @@ routes.get('/home', (request: Request, response: Response) => {
 
 routes.post('/produtos', cadProduto)
 routes.get('/produtos', consultarProdutos)
-routes.get('/produto/:id', consultaProduto)
+routes.get('/produtos/:id', consultaProduto)
 routes.put('/produtos/:id', alterarProduto)
 routes.delete('/produtos/:id', deletarProduto)
 routes.patch('/produtos/:id', saidaProduto)
